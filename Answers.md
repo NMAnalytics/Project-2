@@ -1,6 +1,6 @@
 # Answers
 
-The first thing I am going do is change the data type of the sales and price_each column to a decimal instead of a float. So that there is not more than two decimals places. 
+The first thing I am going to do is change the data type of the sales and price_each column to a decimal instead of a float. So that there are not more than two decimals places. 
 
 ```sql
 ALTER table sales_data_sample
@@ -46,7 +46,7 @@ order by revenue DESC
 |2003|3516979.54|1000|
 |2005|1791486.71|478|
 
-2004 is the highest selling year. Looking at the data, the year 2005 so much lower. Lets find out why.
+2004 is the highest selling year. Looking at the data, the year 2005 is so much lower. Let's find out why.
 
 ---
 I'm going to run this query to find all the months for 2005. 
@@ -69,7 +69,7 @@ order by revenue DESC
 The year 2005 only goes up to May and the years 2003 and 2004 go from January to December 
 
 ---
-Next I want to find what is the highest selling month in the year 2004.
+Next, I want to find what is the highest selling month in the year 2004.
 
 ```sql
 SELECT month_ID, sum(sales) as revenue, count (ORDERNUMBER) as Frequency 
@@ -96,7 +96,7 @@ order by revenue DESC
 The highest selling month is November almost double of October.   
 
 ---
-Next we will find the deal size 
+Next, we will find the deal size 
 ```sql
 SELECT DEALSIZE, sum(sales) as revenue 
 from sales_data_sample
